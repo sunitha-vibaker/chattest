@@ -1,5 +1,5 @@
 var server = require('ws').Server;
-var s = new server({port: 2001 });
+var s = new server({port: process.env.PORT || 2001 });
 
 s.on('connection', function(ws) {
 
