@@ -75,9 +75,10 @@
                   })
           
           
-               
+               var HOST = location.origin.replace(/^http/, 'ws')
+                     var sock = new WebSocket(HOST);
         
-               var sock = new WebSocket("ws://localhost:2001");
+               //var sock = new WebSocket("ws://localhost:2001");
                 
                 sock.onopen = function(){
                     sock.send(JSON.stringify({
